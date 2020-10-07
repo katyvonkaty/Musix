@@ -1,12 +1,11 @@
 import React from "react"
 
 const TrackList = (props) => {
-  const artists = props.artists.map((artist) => {
-    return <div> <p> {artist.artist.name}</p> <br />
-    <img src={artist.artist.avatar} />
+  const tracks = props.tracks.map((track) => {
+    return <div> <a href ={track.track.url}> {track.track.url}</a>
     </div>
   })
-  return <div> {artists} </div>
+  return <div> {tracks} </div>
 };
 
 
