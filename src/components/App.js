@@ -1,25 +1,27 @@
 import React from 'react';
 import SearchBar from './SearchBar';
-import axios from "axios";
+import shazam from "../api/shazam"
+import TrackList from "./TrackList";
 
 
 class App extends React.Component{
 
-  async onSearchSubmit(term) {
-    const response = await axios
-    .get ("https://shazam.p.rapidapi.com/auto-complete?locale=en-US&term=" + term, {
-    params: {query: term},
-    headers: {
-      "x-rapidapi-host": "shazam.p.rapidapi.com",
-      "x-rapidapi-key": "70aa9d5184msh24f489409866b23p1ff84cjsn5832992d4f80"
-    }
+  state = { artists: []}
+
+   onSearchSubmit = async (term)  => {
+    const response = await shazam.get ("/search?locale=en-US&offset=0&limit=10&term=" + term, {
+    params: {query: term}
   })
-  	console.log(response.data.hints);
+  	console.log(this);
+    this.setState({artists: response.data.artists.hits})
 }
 
   render(){
     return <div className="ui container" style={{marginTop:"15px"}}>
       <SearchBar onSubmit={this.onSearchSubmit} />
+      <TrackList artists={this.state.artists} />
+      Found: {this.state.artists.length} artists
+
     </div>
   }
 }
