@@ -1,9 +1,11 @@
 import React from "react"
+import { Image } from 'semantic-ui-react'
 
 const ArtistList = (props) => {
   const artists = props.artists.map((artist) => {
-    return <div> <p> {artist.artist.name}</p> <br />
-    <img className="avatar" src={artist.artist.avatar} />
+    return <div className="artists">
+    <Image src={artist.artist.avatar} avatar />
+    <span>{artist.artist.name}</span>
     </div>
   })
   return <div> {artists} </div>

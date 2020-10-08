@@ -1,14 +1,49 @@
-.ui.fluid.image, .ui.fluid.image img, .ui.fluid.image svg, .ui.fluid.images, .ui.fluid.images img, .ui.fluid.images svg {
-  heght:70vh !important;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
+h1,h2,h3,h4,p,a {
+  font-family: 'Playfair Display', serif !important;
+}
+
+.ui.secondary.menu {
+  border-bottom: 1px solid #eee !important;
+  padding:20px !important;
+
+}
+.test {
+  padding:80px !important;
 }
 
 .testing {
   text-align:center !important;
   padding:50px !important;
+  margin:0 auto;
+  width:60%;
 }
 
+.artists {
+  padding:40px !important;
+}
+hr {
+border:1px dotted #eee;
+width:40%;
+margin:0 auto;
+}
 
 .avatar {
   width: 20%;
-border-radius: 50%;
+  border-radius: 50%;
+
+}
+
+.segment {
+  margin: 0 auto !important;
+width: 60%;
+}
+
+
+.search {
+  margin-top:40px !important;
+  padding:20px !important;
+  margin-bottom:40px !important;
+
 }
