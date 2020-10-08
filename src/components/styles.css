@@ -1,7 +1,14 @@
-.container {
-  width: 100vw !important;
+.ui.fluid.image, .ui.fluid.image img, .ui.fluid.image svg, .ui.fluid.images, .ui.fluid.images img, .ui.fluid.images svg {
+  heght:70vh !important;
 }
-.segment {
-width:60%;
-margin:0 auto;
+
+.testing {
+  text-align:center !important;
+  padding:50px !important;
+}
+
+
+.avatar {
+  width: 20%;
+border-radius: 50%;
 }
