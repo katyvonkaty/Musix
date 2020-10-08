@@ -3,7 +3,9 @@ import SearchBar from './SearchBar';
 import shazam from "../api/shazam"
 import ArtistList from "./ArtistList";
 import TrackList from "./TrackList";
-
+import Navbar from "./Navbar";
+import Jumbotron from "./Jumbotron";
+import 'semantic-ui-css/semantic.min.css'
 
 
 class App extends React.Component{
@@ -15,15 +17,21 @@ class App extends React.Component{
     params: {query: term}
   })
   	console.log(this);
-    this.setState({artists: response.data.artists.hits, tracks: response.data.tracks.hits})
+    this.setState({
+      artists: response.data.artists.hits,
+      tracks: response.data.tracks.hits}
+    )
 }
 
   render(){
-    return <div className="ui container" style={{marginTop:"15px"}}>
+    return <div className="container" style={{marginTop:"15px"}}>
+    <Navbar />
       <SearchBar onSubmit={this.onSearchSubmit} />
       <ArtistList artists={this.state.artists} />
-      <TrackList tracks={this.state.tracks} />
       Found: {this.state.artists.length} artists
+
+      <TrackList tracks={this.state.tracks} />
+          <Jumbotron />
 
     </div>
   }
