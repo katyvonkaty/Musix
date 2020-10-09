@@ -1,15 +1,22 @@
-import React from "react"
-import { Image } from 'semantic-ui-react'
+import React from "react";
 
-const ArtistList = (props) => {
-  const artists = props.artists.map((artist) => {
-    return <div className="artists">
-    <Image src={artist.artist.avatar} avatar />
-    <span>{artist.artist.name}</span>
-    </div>
-  })
-  return <div> {artists} </div>
-};
 
+
+
+const ArtistList = props =>{
+    const artists = props.artists.map( artist =>{
+        return (
+          <span className="artist-result">
+          <img className="avatar" src= {artist.artist.avatar} />
+          <h2 className = "artist-header"> {artist.artist.name} </h2>
+          </span>
+        );
+    })
+    return(
+        <div className="row">
+           {artists}
+        </div>
+    )
+}
 
 export default ArtistList
