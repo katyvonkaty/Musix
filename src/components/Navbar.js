@@ -1,42 +1,60 @@
 import React, { Component } from 'react'
 import { Input, Menu } from 'semantic-ui-react'
+import { Link} from "react-router-dom";
+
+
 
 export default class Navbar extends Component {
-  state = { activeItem: 'home' }
 
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
   render() {
-    const { activeItem } = this.state
 
     return (
       <Menu secondary>
-        <Menu.Item
-          name='home'
-          active={activeItem === 'home'}
-          onClick={this.handleItemClick}
-        />
-        <Menu.Item
-          name='messages'
-          active={activeItem === 'messages'}
-          onClick={this.handleItemClick}
-        />
-        <Menu.Item
-          name='friends'
-          active={activeItem === 'friends'}
-          onClick={this.handleItemClick}
-        />
+      <Link to="/">  <Menu.Item name="home"  /> </Link>
+      <Link to="/messages"><Menu.Item name='Messages' /> </Link>
+      <Link to="/messages">  <Menu.Item name='friends' /> </Link>
+
+
         <Menu.Menu position='right'>
           <Menu.Item>
             <Input icon='search' placeholder='Search...' />
           </Menu.Item>
           <Menu.Item
             name='logout'
-            active={activeItem === 'logout'}
-            onClick={this.handleItemClick}
           />
         </Menu.Menu>
       </Menu>
     )
   }
 }
+//
+// import React, { Component } from 'react';
+//
+// import { Link} from "react-router-dom";
+//
+//
+//
+// class Navbar extends Component{
+//   render() {
+//     return(
+//       <nav className="nav-wrapper">
+//           <div className="container">
+//             <ul className="left">
+//               <Link to="/" className="brand-logo">Delivered</Link>
+//               </ul>
+//
+//               <ul className="right">
+//                   <li><Link to="/messages">Messages</Link></li>
+//                   <li><Link to="/sweets">Sweets</Link></li>
+//               </ul>
+//           </div>
+//       </nav>
+//     )
+//   }
+// }
+
+
+
+
+// export default Navbar;

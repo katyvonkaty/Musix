@@ -1,8 +1,6 @@
 import React from "react";
 
 
-
-
 const ArtistList = props =>{
     const artists = props.artists.map( artist =>{
         return (
