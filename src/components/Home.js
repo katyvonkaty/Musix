@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-import SearchBar from './SearchBar';
 import shazam from "../api/shazam"
-import ArtistList from "./ArtistList";
 import "./styles.css";
-import TrackList from "./TrackList";
 import Jumbotron from "./Jumbotron";
 import Copy from "./Copy";
 import GridExampleColumnWidth from "./GridExampleColumnWidth";
@@ -21,15 +18,15 @@ class Home extends React.Component{
            />
 
           <Jumbotron
-          img="https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=40"
+          img="https://images.unsplash.com/photo-1458560871784-56d23406c091?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
           />
 
 
           <GridExampleColumnWidth
-          img= "https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=40"
-          header=" Hello"
-          content= "ying is the duplication of information or an artifact based on an instance of that information or artifact, and not using the process that originally generated it. "
-          img2= "https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=40"
+          img= "https://images.unsplash.com/photo-1487215078519-e21cc028cb29?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+          header=" Hello, Come here Often?"
+          content= "Flannel tote bag twee kitsch, kogi bicycle rights scenester everyday carry lumbersexual hoodie gluten-free affogato schlitz farm-to-table gastropub. Authentic kickstarter fingerstache twee scenester cold-pressed whatever gentrify. Banjo sustainable fam, gluten-free try-hard pork belly raclette marfa mixtape tousled gochujang vice. Cardigan kogi direct trade affogato. Celiac mustache man braid copper mug, paleo sriracha edison bulb ennui bushwick tofu locavore. Knausgaard man bun crucifix, sustainable meh food truck pour-over tousled vaporware franzen affogato hell of meggings. Pinterest disrupt fixie raw denim, williamsburg coloring book poke selvage. "
+
            />
 
 

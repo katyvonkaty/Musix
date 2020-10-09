@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Input, Menu } from 'semantic-ui-react'
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 
@@ -28,33 +28,3 @@ export default class Navbar extends Component {
     )
   }
 }
-//
-// import React, { Component } from 'react';
-//
-// import { Link} from "react-router-dom";
-//
-//
-//
-// class Navbar extends Component{
-//   render() {
-//     return(
-//       <nav className="nav-wrapper">
-//           <div className="container">
-//             <ul className="left">
-//               <Link to="/" className="brand-logo">Delivered</Link>
-//               </ul>
-//
-//               <ul className="right">
-//                   <li><Link to="/messages">Messages</Link></li>
-//                   <li><Link to="/sweets">Sweets</Link></li>
-//               </ul>
-//           </div>
-//       </nav>
-//     )
-//   }
-// }
-
-
-
-
-// export default Navbar;

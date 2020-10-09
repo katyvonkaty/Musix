@@ -6,7 +6,6 @@ import Messages from './components/Messages'
 
 
 
-
 class App extends Component {
 
   render() {
@@ -14,8 +13,8 @@ class App extends Component {
       <HashRouter basename='/'>
             <div className="App">
               <Navbar/>
-                    <Route exact path="/" component={Home}/>
-                    <Route path="/messages" component={Messages}/>
+                  <Route exact path="/" component={Home}/>
+                  <Route path="/messages" component={Messages}/>
              </div>
        </HashRouter>
 

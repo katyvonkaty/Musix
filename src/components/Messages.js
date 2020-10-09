@@ -25,7 +25,7 @@ class Messages extends React.Component{
     return <div className="container" style={{marginTop:"15px"}}>
 
     <Jumbotron
-    img = "https://images.unsplash.com/photo-1513829596324-4bb2800c5efb?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" />
+    img = "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=40" />
 
       <SearchBar onSubmit={this.onSearchSubmit} />
       <ArtistList artists={this.state.artists} />
