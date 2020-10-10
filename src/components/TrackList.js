@@ -1,4 +1,6 @@
 import React from "react"
+import { Grid } from 'semantic-ui-react'
+
 
 const TrackList = (props) => {
   const tracks = props.tracks.map((track) => {
@@ -10,7 +12,13 @@ const TrackList = (props) => {
     </span>
     )
   })
-  return <div className="row"> {tracks} </div>
+  return  (<Grid columns='one' divided>
+    <Grid.Row>
+      <Grid.Column> {tracks}
+        </Grid.Column>
+    </Grid.Row>
+    </Grid>
+  )
 };
 
 
