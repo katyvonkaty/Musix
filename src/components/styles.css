@@ -21,8 +21,15 @@ h4,h5,p {
   padding:80px !important;
 }
 
+.ui.button {
+  background-color:#C4E538 !important;
+  border: none !important;
+}
+
 #img-height{
   height:85vh;
+  width: 90%;
+    margin: 0 auto;
 }
 
 .testing {

@@ -2,13 +2,14 @@ import React, {Component} from 'react';
 import SearchBar from "./SearchBar";
 import ArtistList from "./ArtistList";
 import Jumbotron from "./Jumbotron";
+import Copy from "./Copy";
 import shazam from "../api/shazam";
 
 
 
-class Messages extends React.Component{
+class Artists extends React.Component{
 
-  state = { artists: [], tracks:[]}
+  state = { artists: []}
 
    onSearchSubmit = async (term)  => {
     const response = await shazam.get ("/search?locale=en-US&offset=0&limit=10&term=" + term, {
@@ -16,8 +17,8 @@ class Messages extends React.Component{
   })
   	console.log(this);
     this.setState({
-      artists: response.data.artists.hits,
-      tracks: response.data.tracks.hits}
+      artists: response.data.artists.hits
+    }
     )
 }
 
@@ -25,7 +26,11 @@ class Messages extends React.Component{
     return <div className="container" style={{marginTop:"15px"}}>
 
     <Jumbotron
-    img = "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=40" />
+    img = "https://images.unsplash.com/photo-1489641493513-ba4ee84ccea9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" />
+    <Copy
+    SmallHeader="Testing"
+    LargeHeader="We just updated our privacy policy here to better service our customers. We recommend reviewing the changes."
+     />
 
       <SearchBar onSubmit={this.onSearchSubmit} />
       <ArtistList artists={this.state.artists} />
@@ -36,4 +41,4 @@ class Messages extends React.Component{
   }
 }
 
-export default Messages;
+export default Artists;

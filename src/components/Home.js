@@ -23,7 +23,7 @@ class Home extends React.Component{
 
 
           <GridExampleColumnWidth
-          img= "https://images.unsplash.com/photo-1487215078519-e21cc028cb29?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+          img= "https://images.unsplash.com/photo-1502773860571-211a597d6e4b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
           header=" Hello, Come here Often?"
           content= "Flannel tote bag twee kitsch, kogi bicycle rights scenester everyday carry lumbersexual hoodie gluten-free affogato schlitz farm-to-table gastropub. Authentic kickstarter fingerstache twee scenester cold-pressed whatever gentrify. Banjo sustainable fam, gluten-free try-hard pork belly raclette marfa mixtape tousled gochujang vice. Cardigan kogi direct trade affogato. Celiac mustache man braid copper mug, paleo sriracha edison bulb ennui bushwick tofu locavore. Knausgaard man bun crucifix, sustainable meh food truck pour-over tousled vaporware franzen affogato hell of meggings. Pinterest disrupt fixie raw denim, williamsburg coloring book poke selvage. "
 

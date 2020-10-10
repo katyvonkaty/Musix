@@ -10,8 +10,6 @@ class SearchBar extends React.Component {
     this.props.onSubmit(this.state.term)
  }
 
-  //way to prevent this. error
-
 
 
   render(){

@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { HashRouter, Route, Link } from "react-router-dom";
 import Navbar from './components/Navbar'
 import Home from './components/Home'
-import Messages from './components/Messages'
-
+import Artists from './components/Artists'
+import Tracks from './components/Tracks'
 
 
 class App extends Component {
@@ -14,7 +14,8 @@ class App extends Component {
             <div className="App">
               <Navbar/>
                   <Route exact path="/" component={Home}/>
-                  <Route path="/messages" component={Messages}/>
+                  <Route path="/artists" component={Artists}/>
+                  <Route path="/tracks" component={Tracks}/>
              </div>
        </HashRouter>
 
