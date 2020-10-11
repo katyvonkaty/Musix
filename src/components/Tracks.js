@@ -24,16 +24,17 @@ class Tracks extends React.Component{
   render(){
     return <div className="container" style={{marginTop:"15px"}}>
 
-    <Jumbotron
-    img = "https://images.unsplash.com/photo-1489641493513-ba4ee84ccea9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" />
-    <Copy
-    SmallHeader="Testing"
-    LargeHeader="We just updated our privacy policy here to better service our customers. We recommend reviewing the changes."
-     />
+
+     <TrackList tracks={this.state.tracks} />
 
       <SearchBar onSubmit={this.onSearchSubmit} />
-      <TrackList tracks={this.state.tracks} />
+      <Copy
+      SmallHeader="Testing"
+      LargeHeader="We just updated our privacy policy here to better service our customers. We recommend reviewing the changes."
+       />
 
+      <Jumbotron
+      img = "https://images.unsplash.com/photo-1489641493513-ba4ee84ccea9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" />
 
 
     </div>

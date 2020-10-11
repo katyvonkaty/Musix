@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from 'semantic-ui-react'
 
 
 class SearchBar extends React.Component {
@@ -17,8 +18,9 @@ class SearchBar extends React.Component {
       <div className="ui segment search">
         <form onSubmit = {this.onFormSubmit} className= "ui form">
           <div className = "field">
-                <label> Search Artists </label>
-                <input value= {this.state.term} onChange={(e) => this.setState({term: e.target.value})} type="text" />
+                <label> What are you looking for? </label>
+                <input style={{width: "80%"}} value= {this.state.term} onChange={(e) => this.setState({term: e.target.value})} type="text" />
+                <Button style={{marginLeft: "15px", width: "15%"}} onSubmit = {this.onFormSubmit}> Search </Button>
             </div>
         </form>
      </div>

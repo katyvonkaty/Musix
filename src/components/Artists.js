@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import SearchBar from "./SearchBar";
 import ArtistList from "./ArtistList";
+import TrackList from "./TrackList";
+
 import Jumbotron from "./Jumbotron";
 import Copy from "./Copy";
 import shazam from "../api/shazam";
@@ -16,11 +18,13 @@ class Artists extends React.Component{
     params: {query: term}
   })
   	console.log(this);
-    this.setState({
-      artists: response.data.artists.hits
-    }
+      this.setState({
+        artists: response.data.artists.hits
+      }
     )
 }
+
+
 
   render(){
     return <div className="container" style={{marginTop:"15px"}}>

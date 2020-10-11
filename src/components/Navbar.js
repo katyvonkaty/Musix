@@ -21,7 +21,7 @@ export default class Navbar extends Component {
             <Input icon='search' placeholder='Search...' />
           </Menu.Item>
           <Menu.Item>
-            <Button> Logout </Button>
+            <Button> <Link to="/login"> Logout </Link></Button>
           </Menu.Item>
         </Menu.Menu>
       </Menu>

@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Home from './components/Home'
 import Artists from './components/Artists'
 import Tracks from './components/Tracks'
+import Login from './components/Login'
 
 
 class App extends Component {
@@ -16,6 +17,7 @@ class App extends Component {
                   <Route exact path="/" component={Home}/>
                   <Route path="/artists" component={Artists}/>
                   <Route path="/tracks" component={Tracks}/>
+                  <Route path="/login" component={Login}/>
              </div>
        </HashRouter>
 
