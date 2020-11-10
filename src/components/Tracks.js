@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import SearchBar from "./SearchBar";
 import TrackList from "./TrackList";
 import Jumbotron from "./Jumbotron";
-import Copy from "./Copy";
 import shazam from "../api/shazam";
+import axios from "axios"
 
 
 
@@ -11,30 +11,30 @@ class Tracks extends React.Component{
 
   state = {  tracks:[]}
 
+
    onSearchSubmit = async (term)  => {
-    const response = await shazam.get ("/search?locale=en-US&offset=0&limit=10&term=" + term, {
-    params: {query: term}
+
+    const response = await shazam.get ("/search", {
+    params: {
+      q: term,
+      access_token: "4vz9rrIsOwAgBD8rmr0zpEl1Ue1FDitfRpO0fQ6aD622vnpgLcLgUj-RHQ_XfLpR"
+    }
   })
-  	console.log(this);
+  	console.log(response.data.response.hits);
     this.setState({
-      tracks: response.data.tracks.hits}
+      tracks: response.data.response.hits}
     )
+
 }
 
   render(){
-    return <div className="container" style={{marginTop:"15px"}}>
-
+    return <div className="container" id="track">
+    <Jumbotron />
+    <SearchBar onSubmit={this.onSearchSubmit} />
 
      <TrackList tracks={this.state.tracks} />
 
-      <SearchBar onSubmit={this.onSearchSubmit} />
-      <Copy
-      SmallHeader="Testing"
-      LargeHeader="We just updated our privacy policy here to better service our customers. We recommend reviewing the changes."
-       />
 
-      <Jumbotron
-      img = "https://images.unsplash.com/photo-1489641493513-ba4ee84ccea9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" />
 
 
     </div>

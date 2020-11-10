@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { HashRouter, Route, Link } from "react-router-dom";
-import Navbar from './components/Navbar'
-import Home from './components/Home'
-import Artists from './components/Artists'
-import Tracks from './components/Tracks'
-import Login from './components/Login'
+import Navbar from './Navbar'
+import Home from './Home'
+import Artists from './Artists'
+import Tracks from './Tracks'
+import Login from './Login'
 
 
 class App extends Component {

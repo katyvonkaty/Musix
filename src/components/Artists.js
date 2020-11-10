@@ -14,8 +14,8 @@ class Artists extends React.Component{
   state = { artists: []}
 
    onSearchSubmit = async (term)  => {
-    const response = await shazam.get ("/search?locale=en-US&offset=0&limit=10&term=" + term, {
-    params: {query: term}
+     const response = await shazam.get ("/search" + term, {
+     params: {query: term}
   })
   	console.log(this);
       this.setState({

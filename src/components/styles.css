@@ -17,12 +17,26 @@ h4,h5,p {
   padding:20px !important;
 }
 
-.inputs {
-  
+.forFun {
+  width:30% !important;
+  float:left !important;
 }
+
 .test {
   padding:80px !important;
 }
+
+img {
+  width:100%;
+  height:100%;
+}
+
+/* .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  grid-gap: 10px;
+  max-width: 900px;
+} */
 
 .ui.button {
   background-color:#C4E538 !important;
