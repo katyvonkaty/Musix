@@ -6,7 +6,6 @@ import SearchBar from "./SearchBar";
 import TrackList from "./TrackList";
 import Tracks from "./Tracks";
 
-// import GridExampleColumnWidth from "./GridExampleColumnWidth";
 import 'semantic-ui-css/semantic.min.css'
 
 

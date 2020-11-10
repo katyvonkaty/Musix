@@ -11,9 +11,8 @@ export default class Navbar extends Component {
 
     return (
       <Menu secondary>
-      <Link to="/">  <Menu.Item name="home"  /> </Link>
-      <Link to="/artists"><Menu.Item name='Artists' /> </Link>
-      <Link to="/tracks">  <Menu.Item name='Tracks' /> </Link>
+      <Link to="/tracks">  <Menu.Item name="home"  /> </Link>
+
 
 
         <Menu.Menu position='right'>
